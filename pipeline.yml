@@ -25,8 +25,6 @@ jobs:
     - get: bbr-release
       trigger: true
   - task: extract-binary
-    tags:
-    - {{concourse-worker-tag}}
     config:
       platform: linux
       image_resource:
@@ -46,8 +44,6 @@ jobs:
           tar -xvf bbr-release/bbr*.tar
           cp releases/bbr binary/
   - task: bbr-backup-ert
-    tags:
-    - {{concourse-worker-tag}}
     file: bbr-pipeline-tasks-repo/tasks/bbr-backup-ert/task.yml
     params:
       SKIP_SSL_VALIDATION: {{skip-ssl-validation}}
@@ -67,8 +63,6 @@ jobs:
     - get: bbr-release
       trigger: true
   - task: extract-binary
-    tags:
-    - {{concourse-worker-tag}}
     config:
       platform: linux
       image_resource:
@@ -88,8 +82,6 @@ jobs:
           tar -xvf bbr-release/bbr*.tar
           cp releases/bbr binary/
   - task: bbr-backup-director
-    tags:
-    - {{concourse-worker-tag}}
     file: bbr-pipeline-tasks-repo/tasks/bbr-backup-director/task.yml
     params:
       SKIP_SSL_VALIDATION: {{skip-ssl-validation}}
