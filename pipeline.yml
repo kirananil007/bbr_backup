@@ -14,7 +14,7 @@ jobs:
       OPSMAN_PASSWORD: {{opsman-password}}
   - put: om-backup-artifact
     params:
-      file: om-installation/installation
+      file: om-installation
 
 - name: bbr-backup-ert
   serial: true
