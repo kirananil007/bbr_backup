@@ -14,7 +14,7 @@ pushd ../../../director-backup-artifact
   --private-key-path <(echo "${BBR_PRIVATE_KEY}") \
   backup-cleanup
   
-pushd ../../../director-backup-artifact
+pushd ../../../../director-backup-artifact
   ../binary/bbr director --host "${BOSH_ADDRESS}" \
   --username bbr \
   --private-key-path <(echo "${BBR_PRIVATE_KEY}") \
