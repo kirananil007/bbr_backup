@@ -113,7 +113,7 @@ resources:
     endpoint: {{storage-endpoint}}
     access_key_id: {{storage-access-key-id}}
     secret_access_key: {{storage-secret-access-key}}
-    versioned_file: installation
+    versioned_file: om-installation
 - name: ert-backup-bucket
   type: s3
   source:
