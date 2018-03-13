@@ -8,8 +8,8 @@ BOSH_PRIVATE_KEY=$(jq -r '.credential.value.private_key_pem' bbr_keys.json)
 #cd ../../../binary
 #./bbr director --private-key-path <(echo "${BBR_PRIVATE_KEY}") --username bbr --host "${BOSH_ADDRESS}" backup
 #tar -cvf director-backup.tar -- *
-pushd director-backup-artifact
-  ../../../binary/bbr director --host "${BOSH_ADDRESS}" \
+pushd ../../../director-backup-artifact
+  ../binary/bbr director --host "${BOSH_ADDRESS}" \
   --username bbr \
   --private-key-path <(echo "${BBR_PRIVATE_KEY}") \
   backup
