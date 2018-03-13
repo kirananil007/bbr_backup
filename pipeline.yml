@@ -14,7 +14,7 @@ jobs:
       OPSMAN_PASSWORD: {{opsman-password}}
   - put: om-backup-artifact
     params:
-      file: om-installation/installation.zip
+      file: om-installation/installation
 
 - name: bbr-backup-ert
   serial: true
@@ -113,7 +113,7 @@ resources:
     endpoint: {{storage-endpoint}}
     access_key_id: {{storage-access-key-id}}
     secret_access_key: {{storage-secret-access-key}}
-    versioned_file: installation.zip
+    versioned_file: installation
 - name: ert-backup-bucket
   type: s3
   source:
