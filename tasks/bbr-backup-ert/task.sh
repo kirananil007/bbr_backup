@@ -2,7 +2,7 @@
 
 . "$(dirname $0)"/../../scripts/export-director-metadata
 
-bakup_time=$(date +"%F"-"%S")
+#bakup_time=$(date +"%F"-"%S")
 
 cd ../../../binary
 ./bbr deployment --target "${BOSH_ADDRESS}" --username "${BOSH_CLIENT}" --deployment "${ERT_DEPLOYMENT_NAME}" --ca-cert "${BOSH_CA_CERT_PATH}" backup-cleanup
@@ -15,5 +15,5 @@ pushd ../../../ert-backup-artifact
   --ca-cert "${BOSH_CA_CERT_PATH}" \
   backup --with-manifest
 
-  tar -cvf ert-backup-$bakup_time.tar -- *
+  tar -cvf ert-backup.tar -- *
 popd
