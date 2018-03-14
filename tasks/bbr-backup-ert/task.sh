@@ -7,7 +7,7 @@ pushd ../../../ert-backup-artifact
   --username "${BOSH_CLIENT}" \
   --deployment "${ERT_DEPLOYMENT_NAME}" \
   --ca-cert "${BOSH_CA_CERT_PATH}" \
-  backup --with-manifest
+  backup-cleanup --with-manifest
 
   tar -cvf ert-backup.tar -- *
 popd
