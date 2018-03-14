@@ -16,5 +16,5 @@ pushd ../../../director-backup-artifact
   --private-key-path <(echo "${BBR_PRIVATE_KEY}") \
   backup
     
-  tar -cvf director-backup$bakup_time.tar -- *
+  tar -cvf director-backup-$bakup_time.tar -- *
 popd
