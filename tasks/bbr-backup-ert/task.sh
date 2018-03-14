@@ -11,5 +11,5 @@ pushd ../../../ert-backup-artifact
   --ca-cert "${BOSH_CA_CERT_PATH}" \
   backup --with-manifest
 
-  tar -cvf ert-backup$bakup_time.tar -- *
+  tar -cvf ert-backup-$bakup_time.tar -- *
 popd
